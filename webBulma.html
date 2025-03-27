@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemple Bulma 1.0.2 amb Menú Responsive</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .navbar-link::after {
+            display: none !important;
+        }
+        .custom-dropdown-icon {
+            margin-left: 0.5em;
+        }
+        .navbar-dropdown {
+            display: none;
+        }
+        .navbar-item.has-dropdown.is-active .navbar-dropdown {
+            display: block;
+        }
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#inici">
+                <img class="logo" src="https://via.placeholder.com/40x40" alt="Logo">
+                <strong>Exemple Web</strong>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#inici">Inici</a>
+                <a class="navbar-item" href="#sobre-nosaltres">Sobre Nosaltres</a>
+
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link dropdown-toggle">
+                        Serveis
+                        <span class="custom-dropdown-icon">
+                            <i class="fas fa-angle-down" id="dropdown-icon"></i>
+                        </span>
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="#servei-1">Servei 1: Desenvolupament Web</a>
+                        <a class="navbar-item" href="#servei-2">Servei 2: Disseny Gràfic</a>
+                        <a class="navbar-item" href="#servei-3">Servei 3: Consultoria TIC</a>
+                    </div>
+                </div>
+
+                <a class="navbar-item" href="#contacte">Contacte</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contingut de la pàgina -->
+    <section id="inici" class="section">
+        <div class="container">
+            <h1 class="title">Benvinguts a la nostra web</h1>
+            <p class="subtitle">Aquesta és la pàgina d'inici de la nostra empresa, on trobaràs tota la informació sobre els nostres serveis i projectes.</p>
+            <p>En aquesta secció podràs conèixer els nostres objectius i valors empresarials, així com els nostres últims projectes i notícies.</p>
+        </div>
+    </section>
+
+    <section id="sobre-nosaltres" class="section">
+        <div class="container">
+            <h2 class="title">Sobre Nosaltres</h2>
+            <p>La nostra empresa és una organització dedicada a proporcionar solucions innovadores en el camp de les tecnologies de la informació i la comunicació. Fundada l'any 2010, hem crescut fins a esdevenir una de les empreses líders en desenvolupament web i disseny gràfic.</p>
+            <p>El nostre equip està compost per professionals amb anys d'experiència en els seus respectius camps, garantint sempre la màxima qualitat en els nostres serveis.</p>
+        </div>
+    </section>
+
+    <section id="servei-1" class="section">
+        <div class="container">
+            <h2 class="title">Servei 1: Desenvolupament Web</h2>
+            <p>Ofereixem solucions de desenvolupament web personalitzades segons les necessitats del nostre client. Des de simples pàgines web fins a aplicacions complexes, utilitzem les últimes tecnologies per garantir una experiència d'usuari òptima.</p>
+            <p>El nostre equip de desenvolupadors és expert en llenguatges com HTML5, CSS3, JavaScript, i frameworks com React i Angular.</p>
+        </div>
+    </section>
+
+    <section id="servei-2" class="section">
+        <div class="container">
+            <h2 class="title">Servei 2: Disseny Gràfic</h2>
+            <p>El disseny gràfic és una part fonamental de la nostra oferta de serveis. Creem identitats visuals coherents i atractives per a les nostres empreses clients, des de logotips fins a materials de màrqueting.</p>
+            <p>El nostre equip de dissenyadors és expert en programes com Adobe Photoshop i Illustrator, garantint sempre resultats de màxima qualitat.</p>
+        </div>
+    </section>
+
+    <section id="servei-3" class="section">
+        <div class="container">
+            <h2 class="title">Servei 3: Consultoria TIC</h2>
+            <p>Ofereixem serveis de consultoria en tecnologies de la informació i la comunicació per ajudar les empreses a millorar la seva eficiència i competitivitat. Des d'auditories de seguretat fins a implementacions de solucions de gestió empresarial, el nostre equip d'experts està preparat per ajudar-te.</p>
+            <p>Col·laborarem amb tu per identificar les necessitats específiques de la teva empresa i implementar les solucions més adequades.</p>
+        </div>
+    </section>
+
+    <section id="contacte" class="section">
+        <div class="container">
+            <h2 class="title">Contacte</h2>
+            <p>Per més informació sobre els nostres serveis o per a qualsevol consulta, no dubtis en contactar-nos. Estem aquí per ajudar-te.</p>
+            <p>Adreça: Carrer Exemple, 123, Barcelona</p>
+            <p>Telèfon: 93 123 45 67</p>
+            <p>Correu electrònic: <a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Funcionalitat del menú hamburger
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+
+            // Funcionalitat del menú desplegable
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.navbar-item.has-dropdown');
+            const dropdownIcon = document.getElementById('dropdown-icon');
+
+            dropdownToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('is-active');
+                if (dropdownMenu.classList.contains('is-active')) {
+                    dropdownIcon.classList.remove('fa-angle-down');
+                    dropdownIcon.classList.add('fa-angle-up');
+                } else {
+                    dropdownIcon.classList.remove('fa-angle-up');
+                    dropdownIcon.classList.add('fa-angle-down');
+                }
+            });
+
+            // Tancar el menú desplegable quan es fa clic fora
+            document.addEventListener('click', (e) => {
+                if (!dropdownMenu.contains(e.target) && dropdownMenu.classList.contains('is-active')) {
+                    dropdownMenu.classList.remove('is-active');
+                    dropdownIcon.classList.remove('fa-angle-up');
+                    dropdownIcon.classList.add('fa-angle-down');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
