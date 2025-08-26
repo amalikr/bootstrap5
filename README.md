@@ -1,4 +1,4 @@
 # bootstrap5
-Template for students at Pompeu Fabra High School to create a website containing Bootstrap 5, p5.js and ml5.js
+Aquesta és una plantilla web en català amb menú desplegable, icones Font Awesome diferenciades, mode clar i fosc, i disseny responsiu per mòbil i ordinador utilitzant Bootstrap 5.3.8.
 
-webnova.html for 2023-2024 students
+menu2526.html pel cus 2025-2026
