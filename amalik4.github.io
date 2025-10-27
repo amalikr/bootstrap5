@@ -66,7 +66,7 @@
     <div class="container-fluid">
       <!-- 5. Logo i text -->
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.png" alt="Logo" class="logo rounded-circle me-2">
+        <log
         <span class="fw-bold">Web d'alumne</span>
       </a>
 
